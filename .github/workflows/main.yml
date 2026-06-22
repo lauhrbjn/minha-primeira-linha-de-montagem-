@@ -1,9 +1,6 @@
 name: Minha Primeira Linha de Montagem 
 
-
- 
-
-on: 
+ on: 
 
   push: 
 
