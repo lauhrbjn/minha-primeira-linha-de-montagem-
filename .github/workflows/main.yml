@@ -15,5 +15,11 @@ jobs:
       - name: 2. Executar Teste e Gerar Identificador
         run: echo "Construindo o projeto... Verificando se todas as peças se encaixam!"
 
-      - name: 3. Disponibilizar Artefato.
-        run: echo "Eu, Laura Gabrielly Tomaz Silva conclui o teste de versionamento na data de $(date)"
+      - name: 3. Disponibilizar Artefato
+        run: echo "Eu, Laura Gabrielly Tomaz Silva concluí o teste de versionamento na data de $(date)" > produto.txt
+
+      - name: 4. Empacotar o produto final (Artefato)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pacote-do-produto
+          path: produto.txt
